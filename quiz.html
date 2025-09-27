@@ -23,64 +23,94 @@
     </nav>
   </header>  
 
-  <p> Which ingredient is best for removing a tan?</p>
-  <input type="radio" name="q1" >Aloe Vera<br>
-  <input type="radio" name="q1" id="correct1">Turmeric<br>
-  <input type="radio" name="q1" >Lemon Juice<br>
-  <input type="radio" name="q1" >Cucumber<br>
+ <h1>🌿 Natural Skincare Quiz</h1>
 
-  <p>Which ingredient helps reduce puffiness and refresh tired eyes?</p>
-  <input type="radio" name="q2" >Aloe Vera<br>
-  <input type="radio" name="q2" id="correct2">Cucumber<br>
-  <input type="radio" name="q2" >Oatmeal<br>
-  <input type="radio" name="q2" >Honey<br>
+  <div class="quiz-container">
+    <form id="quizForm">
+      <!-- Question 1 -->
+      <div class="question">
+        <p>1. Which natural ingredient is best for reducing a sun tan?</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="a"> Turmeric</label><br>
+          <label><input type="radio" name="q1" value="b"> Aloe Vera</label><br
+          <label><input type="radio" name="q1" value="c"> Coffee</label><br
+          <label><input type="radio" name="q1" value="d"> Coconut oil</label><br>
+        </div>
+      </div>
 
-  <p>What natural ingredient is most effective for calming acne and irritation?</p>
-  <input type="radio" name="q3" id="correct3">Aloe Vera<br>
-  <input type="radio" name="q3" >Rosewater<br>
-  <input type="radio" name="q3" >Oatmeal<br>
-  <input type="radio" name="q3" >Ground Coffee <br>
+      <!-- Question 2 -->
+      <div class="question">
+        <p>2. Which ingredient is commonly used to reduce acne?</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="a"> Tea tree oil</label><br>
+          <label><input type="radio" name="q2" value="b"> Honey</label><br>
+          <label><input type="radio" name="q2" value="c"> Rose water</label><br>
+          <label><input type="radio" name="q2" value="d"> Olive oil</label><br>
+        </div>
+      </div>
 
-  <p>Which ingredient acts as a natural moisturizer by attracting water to the skin?</p>
-  <input type="radio" name="q4" id="correct4" >Honey<br>
-  <input type="radio" name="q4" >Rosewater<br>
-  <input type="radio" name="q4" >Milk<br>
-  <input type="radio" name="q4" >Ground Coffee <br>
+      <!-- Question 3 -->
+      <div class="question">
+        <p>3. What is the best natural exfoliant for removing dead skin cells?</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="a"> Sugar</label><br
+          <label><input type="radio" name="q3" value="b"> Milk</label><br>
+          <label><input type="radio" name="q3" value="c"> Banana</label><br>
+          <label><input type="radio" name="q3" value="d"> Almond oil</label><br>
+        </div>
+      </div>
 
-  <p>What is the best natural exfoliant for removing dead skin cells?</p>
-  <input type="radio" name="q5" >Banana<br>
-  <input type="radio" name="q5" id="correct5">Sugar<br>
-  <input type="radio" name="q5" >Milk<br>
-  <input type="radio" name="q5" >Tea Tree Oil<br> 
-  
-  <input type="submit" name="Submit" value="Submit Quiz" onclick="result()">
-  <script> type="text/javascript">
-    function result(){
-        var score = 0;
-        if (document.getElementById('correct1').checked);
-        {
-            score++;
+      <!-- Question 4 -->
+      <div class="question">
+        <p>4. Which kitchen ingredient is best for brightening dull skin?</p>
+        <div class="options">
+          <label><input type="radio" name="q4" value="a"> Lemon juice</label><br>
+          <label><input type="radio" name="q4" value="b"> Shea butter</label><br>
+          <label><input type="radio" name="q4" value="c"> Green tea</label><br>
+          <label><input type="radio" name="q4" value="d"> Castor oil</label><br>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <p>5. What is the best natural moisturizer for dry skin?</p>
+        <div class="options">
+          <label><input type="radio" name="q5" value="a"> Aloe vera</label><br>
+          <label><input type="radio" name="q5" value="b"> Coconut oil</label><br>
+          <label><input type="radio" name="q5" value="c"> Sandalwood powder</label><br>
+          <label><input type="radio" name="q5" value="d"> Rice water</label><br>
+        </div>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const correctAnswers = {
+        q1: "b",
+        q2: "a",
+        q3: "a",
+        q4: "a",
+        q5: "b"
+      };
+
+      let score = 0;
+      let total = Object.keys(correctAnswers).length;
+
+      for (let key in correctAnswers) {
+        let selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === correctAnswers[key]) {
+          score++;
         }
-         if (document.getElementById('correct2').checked);
-        {
-            score++;
-        }
-            if (document.getElementById('correct3').checked);
-            {
-                score++;
-            }
-            if (document.getElementById('correct4').checked);
-            {
-                score++;
-            }
-            if (document.getElementById('correct5').checked);
-            {
-                score++;
-            }
-            document.write("Your score is:"+score);
-            
+      }
+
+      document.getElementById("result").textContent = 
+        `You scored ${score} out of ${total}! 🌸`;
     }
-
   </script>
 </body>
 </html>

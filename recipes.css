@@ -76,3 +76,12 @@ ul {
   font-size: 18px;
   line-height: 1.6;
 }
+
+.quiz-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
