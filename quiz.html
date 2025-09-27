@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="recipes.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html">
+    <img src="logo.png" width="300" class="logo">
+    </a>
+
+    <nav class="nav-bar">
+      <ul>
+        <a href="skincarebasics.html">Skincare Basics</a></li>
+        <a href="diyrecipes.html">DIY Recipes</a></li>
+        <a href="suncare.html">Sun Care</a></li>
+        <a href="ourmission.html">Our Mission</a></li>
+        <a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>  
+
+  <p> Which ingredient is best for removing a tan?</p>
+  <input type="radio" name="q1" >Aloe Vera<br>
+  <input type="radio" name="q1" id="correct1">Turmeric<br>
+  <input type="radio" name="q1" >Lemon Juice<br>
+  <input type="radio" name="q1" >Cucumber<br>
+
+  <p>Which ingredient helps reduce puffiness and refresh tired eyes?</p>
+  <input type="radio" name="q2" >Aloe Vera<br>
+  <input type="radio" name="q2" id="correct2">Cucumber<br>
+  <input type="radio" name="q2" >Oatmeal<br>
+  <input type="radio" name="q2" >Honey<br>
+
+  <p>What natural ingredient is most effective for calming acne and irritation?</p>
+  <input type="radio" name="q3" id="correct3">Aloe Vera<br>
+  <input type="radio" name="q3" >Rosewater<br>
+  <input type="radio" name="q3" >Oatmeal<br>
+  <input type="radio" name="q3" >Ground Coffee <br>
+
+  <p>Which ingredient acts as a natural moisturizer by attracting water to the skin?</p>
+  <input type="radio" name="q4" id="correct4" >Honey<br>
+  <input type="radio" name="q4" >Rosewater<br>
+  <input type="radio" name="q4" >Milk<br>
+  <input type="radio" name="q4" >Ground Coffee <br>
+
+  <p>What is the best natural exfoliant for removing dead skin cells?</p>
+  <input type="radio" name="q5" >Banana<br>
+  <input type="radio" name="q5" id="correct5">Sugar<br>
+  <input type="radio" name="q5" >Milk<br>
+  <input type="radio" name="q5" >Tea Tree Oil<br> 
+  
+  <input type="submit" name="Submit" value="Submit Quiz" onclick="result()">
+  <script> type="text/javascript">
+    function result(){
+        var score = 0;
+        if (document.getElementById('correct1').checked);
+        {
+            score++;
+        }
+         if (document.getElementById('correct2').checked);
+        {
+            score++;
+        }
+            if (document.getElementById('correct3').checked);
+            {
+                score++;
+            }
+            if (document.getElementById('correct4').checked);
+            {
+                score++;
+            }
+            if (document.getElementById('correct5').checked);
+            {
+                score++;
+            }
+            document.write("Your score is:"+score);
+            
+    }
+
+  </script>
+</body>
+</html>
