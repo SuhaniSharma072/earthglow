@@ -1,3 +1,2 @@
 # earthglow
-EarthGlow is a website dedicated to helping users discover natural, affordable, and time-tested skincare solutions. It shares ingredient insights, DIY recipes, and sun care tips to promote healthy, glowing skin. It is built with HTML and CSS.
-
+EarthGlow is a website that helps users learn about natural skincare ingredients, DIY recipes, and sun care tips. I made this project to share safe, inexpensive, and time-tested skincare solutions that are easy to understand and use and that I have personally used and experienced benefits from. I built this website using HTML and CSS. While creating it, I struggled with coding the quiz in order to make sure it takes the answers from the users and gives an accurate score based on how many questions were correct.
